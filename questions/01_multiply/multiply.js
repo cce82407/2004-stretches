@@ -2,11 +2,13 @@
 
 const multiply = (num1, num2) => {
     if(typeof num1 !== 'number' || typeof num2 !== 'number'){
-    throw Error
+    throw new Error()
     }
     return num1*num2
 
 };
 
-console.log(multiply ('@','_'))
+console.log(multiply (2,2))
+//console.log(multiply ('a','b'))
+
 module.exports = { multiply };
