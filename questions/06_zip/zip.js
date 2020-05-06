@@ -8,7 +8,5 @@ zip([
 */
 
 function zip(objs) {
-  // YOUR CODE
-}
-
+ }
 module.exports = { zip };
