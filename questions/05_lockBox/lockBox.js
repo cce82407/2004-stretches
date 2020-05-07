@@ -1,13 +1,41 @@
 const lockBox = (code, message) => {
+  console.log('new changes')
   if (typeof code !== 'number'|| typeof message !== 'string'){
     throw Error
   }
-  function modCode  (mCode) {
-    return mCode
- }
+  
+  let accessCode = code
+  let secretMessage = message
+  return {
+    modCode:  (prevCode, newCode) => {
+      if (preCode !== accessCode){
+        throw new Error ('access denied')
+      }
+      else {
+        accessCode = newCode
+        return accessCode
+      }
+    },
+    modMessage: (passCode, newMessage) => {
 
- function modMessage(){}
-  // write code here
+    if (passCode !== accessCode){
+        throw new Error ('access denied')
+      }
+      else {
+        secretMessage = newMessage
+        return secretMessage
+      }
+    },
+    revealMessage: (passCode) => {
+      if (passCode !== accessCode){
+      throw new Error ('access denied')
+    }
+    else {
+      return secretMessage
+    }
+  }
+ 
+  }
 };
 
 

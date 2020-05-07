@@ -17,6 +17,18 @@ ex 2.
 */
 
 const keysToRooms = (rooms) => {
+  let roomValue = 0
+  for (let i = 0; i < rooms.length; i++){
+    if (rooms[i].includes(i+1)){
+      roomValue++
+    }
+    else roomValue--
+  }
+  console.log(roomValue)
+  if (roomValue === rooms.length -1){
+  return true
+  }
+  else return false
   //YOUR CODE HERE
 };
 

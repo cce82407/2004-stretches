@@ -3,6 +3,7 @@
 
 const validPalindrome = () => {
   let midNum = Math.floor(arguments.length/2)
+  console.log(arguments)
   let arr = [...arguments]
   if (arr.length%2){
     if (arr.slice(0,midNum) === arr.slice(midNum + 1).reverse){
