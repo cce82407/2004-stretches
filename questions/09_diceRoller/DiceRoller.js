@@ -15,7 +15,7 @@ class DiceRoller {
     const helperFunc = () => {
       let rolls = []
       for (let i = 0; i < this.numDice; i++){
-        let rollVal = Math.ceil(Math.random()*5)
+        let rollVal = Math.ceil(Math.random()*this.sides)
         rolls.push(rollVal)
       }
       this.history.push(rolls)
