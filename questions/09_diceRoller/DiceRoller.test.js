@@ -34,6 +34,7 @@ describe('Dice Roller', () => {
     const secondRoll = anotherSingleDie.roll();
     expect(firstRoll[0]).not.toEqual(secondRoll[0]);
   });
+  
 
   test('it should contain a history property that outputs all of the previous rolls', () => {
     const checkHistory = new DiceRoller(1, 1);
