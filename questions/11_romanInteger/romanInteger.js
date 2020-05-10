@@ -22,8 +22,36 @@ examples:
 1994 // MCMXCIV
 */
 
-const romanInteger = () => {
+const romanInteger = (num) => {
+  if (num < 1 || num > 3999){
+    throw Error
+  }
+  romanNums = {
+    '1':'I',
+    '5':'V',
+    '10':'X',
+    '50':'L',
+    '100':'C',
+    '500':'D',
+    '1000':'M',
+  }
+
+  const digits = num.toString().split('').reverse().map((x,i) => {
+    //debugger
+    for (let j = -1; j < i; j++){
+        return x*Math.pow(10,i).toString()
+  }})
+  .reverse().map(x => romanNums[x]).toString()
+
+  console.log(digits)
+  return digits
+}
+  
+  
+  
+  //const digits = (1253).toString().split('')
+  //console.log(digits)
+
   //YOUR CODE HERE
-};
 
 module.exports = { romanInteger };
