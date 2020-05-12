@@ -1,6 +1,6 @@
 const fizzBuzz = (num) => {
   if(typeof num !== 'number' || num < 1){
-    throw Error
+    throw new Error
   }
   const finalArr = []
   for (let i = 1; i <= num; i++){
@@ -8,7 +8,7 @@ const fizzBuzz = (num) => {
       finalArr.push('Fizz')
     }
     if (i%5 === 0){
-      finalArr.push('Fizz')
+      finalArr.push('Buzz')
     }
     if (i%15 === 0){
       finalArr.push('FizzBuzz')
