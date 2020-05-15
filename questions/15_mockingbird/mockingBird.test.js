@@ -9,10 +9,10 @@ describe('Learn how to write mock functions!', () => {
     capitalizeWordMock = jest.fn(capitalizeWord);
 
     // uncomment the console.log to see all the properties that jest adds to a mock
-    // console.log(
-    //   '**************** capitalizeWordMock properties \n',
-    //   capitalizeWordMock,
-    // );
+     console.log(
+      '**************** capitalizeWordMock properties \n',
+       capitalizeWordMock,
+     );
 
     // lets run the function a few times
     capitalizeWordMock('i');
@@ -22,10 +22,10 @@ describe('Learn how to write mock functions!', () => {
     // the .mock property is where the information on calls and results lives
     // mock functions retain a history of every time they are called
 
-    // console.log(
-    //   '********** capitalizeWordMock.mock \n',
-    //   capitalizeWordMock.mock.instances,
-    // );
+     console.log(
+       '********** capitalizeWordMock.mock \n',
+       capitalizeWordMock.mock.instances,
+     );
 
     const { calls, results } = capitalizeWordMock.mock;
 
@@ -61,8 +61,7 @@ describe('Learn how to write mock functions!', () => {
     });
 
     test('now test random outputs using mocks', () => {
-      const numberOfRepeats = Math.floor(Math.random() * 10 + 10);
-
+   
       const bird = () => {
         const sounds = [
           'chirp',
@@ -77,17 +76,70 @@ describe('Learn how to write mock functions!', () => {
         return sounds[randomIdx];
       };
 
-      // create a mock for the bird function
-      const birdMock = null;
+  //     capitalizeWordMock = jest.fn(capitalizeWord);
 
-      const repeaterOutput = repeater(birdMock, numberOfRepeats);
+  //   // uncomment the console.log to see all the properties that jest adds to a mock
+  //    console.log(
+  //     '**************** capitalizeWordMock properties \n',
+  //      capitalizeWordMock,
+  //    );
+
+  //   // lets run the function a few times
+  //   capitalizeWordMock('i');
+  //   capitalizeWordMock('love');
+  //   capitalizeWordMock('javascript');
+
+  //   // the .mock property is where the information on calls and results lives
+  //   // mock functions retain a history of every time they are called
+
+  //    console.log(
+  //      '********** capitalizeWordMock.mock \n',
+  //      capitalizeWordMock.mock.instances,
+  //    );
+
+  //   const { calls, results } = capitalizeWordMock.mock;
+
+  //   // we can test all the inputs
+  //   expect(calls).toEqual(
+  //     expect.arrayContaining([['i'], ['love'], ['javascript']])
+  //   );
+
+  //   // and all the outputs
+  //   expect(results).toEqual(
+  //     expect.arrayContaining([
+  //       expect.objectContaining({ value: 'I' }),
+  //       expect.objectContaining({ value: 'LOVE' }),
+  //       expect.objectContaining({ value: 'JAVASCRIPT' }),
+  //     ])
+  //   );
+
+  //   // even how many times its been called
+  //   expect(capitalizeWordMock).toHaveBeenCalledTimes(3);
+  // });
+      
+      // create a mock for the bird function
+      const birdMock = jest.fn(bird);
+      // lets run the function a few times
+          birdMock();
+          birdMock();
+          birdMock();
+
+      //const repeaterOutput = repeater(birdMock, numberOfRepeats);
 
       // the expected output will be an array of return values from birdMock.
-      const expectedOutput = [];
+      
+      const expectedOutput = ['chirp',
+      'tweet',
+      'blop',
+      'glorp',
+      '🌈you are awesome🐥',
+    ];
 
       // fill out expectedOutput using our mock return values
       birdMock.mock.results.forEach();
 
+      const repeaterOutput = repeater(bird, numberOfRepeats);
+      const expectedOutput = Array(numberOfRepeats).fill(sounds[randomIdx]);
       expect(repeaterOutput).toEqual(expectedOutput);
     });
   });
