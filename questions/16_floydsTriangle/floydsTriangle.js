@@ -28,7 +28,10 @@ const floydsTriangle = n => {
         for (let j = triangleNum(i - 1) + 1; j <= triangleNum(i); j++) {
             row += j;
         }
-        finalTriangle += row + '\n';
+        if(i === n){
+        finalTriangle += row;
+        }
+        else finalTriangle += row + '\n'
     }
     return finalTriangle;
 }
