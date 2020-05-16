@@ -6,6 +6,15 @@
 //  23
 //  456
 
-const floydsTriangle = n => {};
+
+   
+const floydsTriangle = n => {
+    if (n === 1){
+        return 1
+    }
+    return floydsTriangle(n-1)+n 
+}
+
+console.log(floydsTriangle(5))
 
 module.exports = { floydsTriangle };
