@@ -10,14 +10,14 @@
 
 const floydsTriangle = n => {
     if (n === 0) {
-        return ''
+        return '';
     }
 
     const triangleNum = (n) => {
-        if (n === 0) {
+        if (!n) {
             return 0;
         }
-        if (n === 1) {
+        if (n) {
             return 1;
         }
         return triangleNum(n - 1) + n;

@@ -4,7 +4,7 @@
 
 class DiceRoller {
   constructor (sides, numDice){
-    if (typeof sides !== 'number'|| typeof numDice !== 'number' || sides < 1 || numDice < 1){
+    if (typeof sides !== 'number'|| typeof numDice !== 'number' || sides < 3 || numDice < 1){
       throw Error
     }
     this.history = []

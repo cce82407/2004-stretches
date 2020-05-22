@@ -6,8 +6,8 @@ const repeater = (func, n) => {
     console.log(returnValue)
     res.push(returnValue)
   // YOUR CODE
-};
-return res
+  };
+  return res
 }
 // see test specs to complete this stretch
 

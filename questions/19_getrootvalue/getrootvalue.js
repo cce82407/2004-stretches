@@ -19,6 +19,13 @@
 //getrootvalue(object,40)=>'one'
 //returns -1 if value isn't found
 
-const getrootvalue = () => {};
+const getrootvalue = (obj, val) => {
+    for (let key in obj){
+        if (typeof key === 'object'){
+        if (obj[key] === val){
+            return key
+        }  
+    }
+};
 
 module.exports = { getrootvalue };
