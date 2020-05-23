@@ -1,11 +1,6 @@
 //write a function that takes a function, and makes it callable with two invocations
 
 const extensions = (func) => {
-    // if (typeof num1 !== 'number'|| typeof num2 !== 'number'){
-    //     throw Error
-    // }
-    //counter = 0
-    //let value
     if (typeof func !== 'function'){
         throw Error
     }
@@ -20,9 +15,6 @@ const extensions = (func) => {
              return func(num1, num2)
          }
      }
-
-     
-    
 };
 
 
