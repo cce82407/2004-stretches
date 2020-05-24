@@ -33,6 +33,7 @@ describe('setState', () => {
     });
 
     expect(newLocation).toEqual({ lat: newLat, lon: fsLon });
+    console.log(fullStackLocation, newLocation)
     expect(Object.is(fullStackLocation, newLocation)).toBe(false);
   });
 
