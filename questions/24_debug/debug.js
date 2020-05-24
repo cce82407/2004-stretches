@@ -30,4 +30,4 @@ class CoffeeShop {
 module.exports = { CoffeeShop };
 
 const ceePlace = new CoffeeShop()
-console.log(ceePlace.printMenu())
+//console.log(ceePlace.printMenu())
