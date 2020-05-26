@@ -33,7 +33,10 @@ describe('setState', () => {
     });
 
     expect(newLocation).toEqual({ lat: newLat, lon: fsLon });
+<<<<<<< HEAD
     console.log(fullStackLocation, newLocation)
+=======
+>>>>>>> 1b9d610b39a7b1db7dd1ec442e720f92ed561cef
     expect(Object.is(fullStackLocation, newLocation)).toBe(false);
   });
 
@@ -46,7 +49,11 @@ describe('setState', () => {
         .map(() => ({
           val: rng100(),
         }));
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 1b9d610b39a7b1db7dd1ec442e720f92ed561cef
       const randomValComponent = new StatefulThing(initialState);
       newStates.forEach(newState => {
         randomValComponent.setState(newState);
