@@ -9,7 +9,7 @@ const btownbake = (recipe, supplies) => {
     possibleCakes[ing] = Math.floor(supplies[ing]/recipe[ing])
     
   }
-  return Math.min(...Object.values(possibleCakes))
+  return Math.min(...Object.values(possibleCakes))|| 0
 };
 
 module.exports = { btownbake };
