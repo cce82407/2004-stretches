@@ -1,4 +1,3 @@
-// create an array method called "next" that console.logs
 // the next index in the array when called.
 
 /*
@@ -17,3 +16,6 @@
 // YOUR CODE (intentionally blank):
 
 // no export statement required
+Array.prototype.next() = function (){
+    return 'hello'
+}
