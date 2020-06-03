@@ -10,7 +10,17 @@
 // };
 // directory(phonebookData)=>{ 'a/b/c': 12 }
 
-const directory = () => {
+const directory = (obj) => {
+  finalObj = {}
+  
+  for(let key1 in obj){
+    if (typeof obj[key1] === 'object'){
+      let objKey
+     
+      objKey = `${key1}/${obj[key1]}`
+      return objKey
+    }
+  }
   //code in here
 };
 
