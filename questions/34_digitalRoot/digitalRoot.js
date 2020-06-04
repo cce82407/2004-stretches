@@ -7,4 +7,18 @@ ex.
 
 //YOUR CODE GOES HERE
 
+class digitalRoot {
+    root(num){
+        if (num.toString().length === 1){
+            return num
+        }
+
+            const strNum = (num).toString()
+            const arrNum = Array.prototype.map.call(strNum, num => num)
+            const newNum = arrNum.map(number => parseInt(number)).reduce((acc, num) => acc+num)
+            return this.root(newNum)
+        }
+        
+    }
+
 module.exports = { digitalRoot };
