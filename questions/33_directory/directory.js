@@ -12,9 +12,9 @@
 
 const directory = (obj) => {
   finalObj = {}
-  
+
   for(let key1 in obj){
-    if (typeof obj[key1] === 'object'){
+    if (typeof obj[key1] !== 'object'){
       let objKey
      
       objKey = `${key1}/${obj[key1]}`

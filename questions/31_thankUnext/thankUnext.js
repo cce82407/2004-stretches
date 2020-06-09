@@ -16,6 +16,4 @@
 // YOUR CODE (intentionally blank):
 
 // no export statement required
-Array.prototype.next() = function (){
-    return 'hello'
-}
+Array.prototype.next = function (){}

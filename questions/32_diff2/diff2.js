@@ -17,7 +17,7 @@ const diffTwo = (arr) => {
             }
             console.log(diffTwoArr)
         }
-    }
+    } 
     return diffTwoArr.sort()
 };
 
