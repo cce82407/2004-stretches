@@ -34,9 +34,13 @@ describe('setState', () => {
 
     expect(newLocation).toEqual({ lat: newLat, lon: fsLon });
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(fullStackLocation, newLocation)
 =======
 >>>>>>> 1b9d610b39a7b1db7dd1ec442e720f92ed561cef
+=======
+    console.log(fullStackLocation, newLocation)
+>>>>>>> 25_setState
     expect(Object.is(fullStackLocation, newLocation)).toBe(false);
   });
 
