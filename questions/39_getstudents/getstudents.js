@@ -10,6 +10,7 @@ const getStudent = (name) => {
   }
   const data = axios.get('https://fullstack.com/api/cohort2004')
                 .then(res => res.data)
+                .then(console.log(res))
   return  data
 };
 
