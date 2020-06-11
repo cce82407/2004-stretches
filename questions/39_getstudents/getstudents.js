@@ -8,7 +8,8 @@ const getStudent = (name) => {
   if (typeof name !== 'string'){
     throw new Error
   }
-  const data = axios.get('https://fullstack.com/api/cohort2004').data
+  const data = axios.get('https://fullstack.com/api/cohort2004')
+                .then(res => res.data)
   return  data
 };
 
