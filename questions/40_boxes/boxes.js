@@ -10,7 +10,13 @@ class Box {
     
     pack(color, capacity){
         const newBox = new Box(color, capacity)
+        if(this.contents.length === this.capacity){
+            throw Error
+        }
         this.contents.push(newBox)
+    }
+    unpack(){
+        return this.contents
     }
 
 }
