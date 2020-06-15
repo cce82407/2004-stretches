@@ -11,12 +11,10 @@ class Chat {
     this.listeners[str] = fn;
     return {};
   }
-  talk(str,message, fn) {
+  talk(message) {
     Object.values(this.listeners).forEach((listener) =>
       listener(`${str} says ${message}!`)
     );
-    this.listeners[str] = fn;
-    return {};
   }
 }
 
