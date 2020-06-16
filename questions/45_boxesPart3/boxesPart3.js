@@ -24,7 +24,14 @@ class Box {
     }
     return result;
   }
-  //YOUR CODE STARTS HERE
+  
+  movingVan(duration){
+    return setTimeout(() => {
+      return (this.unpack());
+    }, duration) 
+  }
 }
+  //YOUR CODE STARTS HERE
+
 
 module.exports = { Box };
